@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 
-const Filter = ({ filter, onChange }) => {
+const Filter = ({ value, onChange }) => {
   // console.log(filter);
   return (
     <input
       type="text"
       name="filter"
-      value={filter}
-      onChange={({ target }) => onChange(target.value)}
+      value={value}
+      onChange={onChange}
       placeholder="Enter name for Search"
     />
   );
 };
 
 Filter.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
